@@ -1,0 +1,73 @@
+<!--asi se ven los comentarios en html
+la estructura general de un archivo html contiene etiquetas html con la version del lenguaje, el idioma de la pag etc-->
+
+<html>
+    <body>
+        <main>
+            <!--las etiquetas h1,2,3 ... nos ayudan a mostrar titulos-->
+            <h1>CatPhotoApp</h1>
+            <section>
+                <h2>Cat Photos</h2>
+                <!--las etiquetas p nos proporcionan parrafos dentro de nuestra pagina-->
+                <p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos.</a></p>
+                <!-- para añadir links en la pagina usamos el elemento anchor <a> y href como atributo-->
+
+                <!--TODO: Add link to cat photos-->
+                <!-- las etiquetas que no cierran con otra etiqueta se llaman de autocierre
+                a las imagenes se le llama mediante un atributo source 'src' y deben tener un atributo alt
+                en caso de que fallen-->
+                <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back"></a>
+            </section>
+
+            <!-- las etiquetas seccion nos ayudan a separar nuestro codigo-->
+            <section>
+                <h2>Cat Lists</h2>
+                <h3>Things cats love:</h3>
+                <!--las etiquetas unordered list nos ayudan a crear listas, mientras que las etiquetas
+                list i <li> son los elementos de la lista-->
+                <ul>
+                    <li>cat nip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                </ul>
+                <!--figure nos permite separar contenido-->
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                    <!--figcaption nos permite darle un pie de pagina a la imagen o lo que este adentro de fig-->
+                    <!--<em> nos ayuda a escribir con italicas o enfatizar una palabra o texto-->
+                </figure>
+                <h3>Top 3 things cats hate:</h3>
+                <ol><!--la etiqueta ordered list muestra una lista enumerada-->
+                    <li>flea treatment</li>
+                    <li>thunder</li>
+                    <li>other cats</li>
+                </ol>
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                    <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+                    <!--strong nos sirve para resaltar un texto-->
+                </figure>
+            </section>
+            <section>
+                <h2>Cat Form</h2>
+                <!--la etiqueta form nos permite crear un formulario para el usuario y el atributo action
+                nos dice a donde enviaremos la informacion recolectada /url-->
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                    <!--con radio obtenemos un boton que muestra una opcion, incisos-->
+                    <!--el id nos permite identificar una etiqueta-->
+                    <label><input type="radio" id="indoor" name="indoor-outdoor"> Indoor</label>
+                    <!--la etiqueta input abre un campo para escribir, con el atributo type decidimos que tipo
+                    de entrada sera y finalmente con name identificamos los datos que enviamos mediante action-->
+                    <!--con place holder le damos una idea al usuario sobre que tipo de texto poner en la entrada-->
+                    <!--con required denotamos que no puede enviar el formulario vacio-->
+                    <label><input type="radio" id="outdoor" name="indoor-outdoor">outdoor</label>
+                    <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                    <button type="submit">Submit</button>
+                    <!--ratificamos con type que el comportamiento del boton es submit-->
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
+
