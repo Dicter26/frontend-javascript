@@ -1,0 +1,90 @@
+h1, h2, p {
+    text-align: center;
+}
+/*podemos añadir imagenes de fondo con diferentes variantes del atributo background*/
+body{
+   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+   font-family: sans-serif;
+   padding: 20px;
+}
+/*ilumina unicamenre la cajita  que contiene el div o el elemento enlazado
+si especificames en pixeles esto sera en tamaño de pantalla pero si especificamos en 
+porcentaje entonces este sera en relacion al elemento padre*/
+.menu{
+    width: 80%;
+    max-width: 500px;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+/*con margin podemos centrar los elementos de la pagina*/
+h4{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: burlywood;
+}
+/*con las clases podemos generalizar el diseño de un elemento de la pagina*/
+.flavour, .dessert{
+    text-align: left;
+    width:  75%;
+}
+.price {
+    text-align: right;
+    width: 25%;
+}
+/*podemos darle estilo a elementos anidados dentro de una clase con el nombre de la clase mas el elemento*/
+.item p{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+/*un fallback se utiliza cuando la primer fuente no esta disponible y se declara con una coma*/
+h1, h2{
+    font-family: Impact, serif;
+}
+h1{
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+h2{
+    font-size: 30px;
+}
+.established{
+    font-style: italic;
+}
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+.bottom-line{
+    margin-top: 25px;
+}
+footer{
+    font-size: 14px;
+}
+a{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color:brown;
+}
+a:active{
+    color:brown;
+}
+.address{
+    margin-bottom:5px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}

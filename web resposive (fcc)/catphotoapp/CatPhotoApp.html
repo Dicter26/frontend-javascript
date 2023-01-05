@@ -1,7 +1,12 @@
 <!--asi se ven los comentarios en html
 la estructura general de un archivo html contiene etiquetas html con la version del lenguaje, el idioma de la pag etc-->
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- la etiqueta head nos ayuda a establecer el titulo de la pestaña-->
+        <meta charset="UTF-8">
+        <title>CatPhotoApp</title>
+    </head>
     <body>
         <main>
             <!--las etiquetas h1,2,3 ... nos ayudan a mostrar titulos-->
@@ -54,20 +59,43 @@ la estructura general de un archivo html contiene etiquetas html con la version 
                 <!--la etiqueta form nos permite crear un formulario para el usuario y el atributo action
                 nos dice a donde enviaremos la informacion recolectada /url-->
                 <form action="https://freecatphotoapp.com/submit-cat-photo">
+                    <!--con fieldset encapsulamos inputs y etiquetas juntos-->
                     <!--con radio obtenemos un boton que muestra una opcion, incisos-->
                     <!--el id nos permite identificar una etiqueta-->
-                    <label><input type="radio" id="indoor" name="indoor-outdoor"> Indoor</label>
-                    <!--la etiqueta input abre un campo para escribir, con el atributo type decidimos que tipo
+                    <fieldset>
+                        <!-- la etiqueta legend nos sirve como encabezado de un fieldset-->
+                        <legend>Is your cat an indoor or outdoor cat?</legend>
+                        <label><input type="radio" id="indoor" name="indoor-outdoor" checked> Indoor</label>
+                        <!--la etiqueta input abre un campo para escribir, con el atributo type decidimos que tipo
                     de entrada sera y finalmente con name identificamos los datos que enviamos mediante action-->
-                    <!--con place holder le damos una idea al usuario sobre que tipo de texto poner en la entrada-->
-                    <!--con required denotamos que no puede enviar el formulario vacio-->
-                    <label><input type="radio" id="outdoor" name="indoor-outdoor">outdoor</label>
+                        <!--con place holder le damos una idea al usuario sobre que tipo de texto poner en la entrada-->
+                        <!--con required denotamos que no puede enviar el formulario vacio-->
+                        <label><input type="radio" id="outdoor" name="indoor-outdoor">outdoor</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>What's your cat's personality?</legend>
+                        <!-- utilizamos checkbox para formularios con mas de una opcion y pueden seleccionarla-->
+                        <!-- podemos ligar el elemento input de otra forma, primero anidamos el texto dentro de una
+                        etiqueta label y un atributo for que tenga el mismo valor que el atributo id de la etiqueta input-->
+                        <!-- añadir la etiqueta de name facilita el procesamiento del formulario para el server-->
+                        <input type="checkbox" id="loving" name="personality" value="loving" checked> <label for="loving">Loving</label>
+                        <input type="checkbox" id="lazy" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+                        <input type="checkbox" id="energetic" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+                        <!-- si tenemos mas checkboxes podemos añadir el atrbuto name con el valor de la primer etiqueta checkbox,
+                        asi formara parte del mismo formulario-->
+                        <!-- los datos tomados del checkbox son los atributos name y value-->
+                        <!-- usamos el atributo checked para marcar un checkbox o un radio button desde el inicio (default)-->
+                    </fieldset>
                     <input type="text" name="catphotourl" placeholder="cat photo URL" required>
                     <button type="submit">Submit</button>
                     <!--ratificamos con type que el comportamiento del boton es submit-->
                 </form>
             </section>
         </main>
+        <footer>
+            <p>No Copyright - <a href="https://freecodecamp.org"> freeCodeCamp.org</a></p>
+        </footer>
+        <!-- la etiqueta footer es el pie de la pagina-->
     </body>
 </html>
 
