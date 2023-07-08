@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> script js</title>
+    </head>
+    <body>
+        <h3>hello </h3>
+        <script>
+            function add7(number){
+                return number + 7;
+            }    
+            console.log(add7(3));
+
+            function multiply(number, number2){
+                return number*number2;
+            }
+            console.log(multiply(2,8));
+
+            function capitalize(strings){
+               strings = strings[0].toUpperCase() + strings.substr(1, strings.length-1);
+               return strings;
+            }
+            console.log(capitalize("hello"));
+
+            function lastLetter(strings){
+                return strings[strings.length-1];
+            }
+            console.log(lastLetter("Abecedario"));
+            
+            let number = parseInt(prompt("Please enter the number would you like to FizzBuzz up to:"));
+            for(let i = 0; i <= number; i++){
+                if(i % 3 === 0 && i % 5 === 0){
+                    console.log("FizzBuzz");
+                }else if(i % 3 === 0){
+                    console.log("Fizz");
+                }else if(i % 5 === 0){
+                    console.log("Buzz");
+                }else{
+                    console.log(i);
+                }
+            }
+        </script>
+    </body>
+</html>
