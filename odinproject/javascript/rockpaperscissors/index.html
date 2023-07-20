@@ -3,13 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>rockpaperscissors</title>
-        <script src="./functions.js"></script>
+        <script src="./functions.js" defer></script>
     </head>
     <body>
         <h2>A page to play rock, paper or scissors agains a machine</h2>
-        <button onclick="games()">rock, paper or scissors?</button>
-        <p>Result</p>
-        <p id="answer"></p>
+        <button id="rock" class="option">rock</button>
+        <button id="paper" class="option">paper</button>
+        <button id="scissors" class="option">scissors</button>
+        <p>Result<div id="winner"></div></p>
+        <div id="result"></div>
         <h2>scores</h2>
         <p id="player">player: </p>
         <p>vs</p>

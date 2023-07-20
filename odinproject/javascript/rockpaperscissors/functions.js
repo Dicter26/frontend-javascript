@@ -1,8 +1,23 @@
 let playerscore = 0;
 let computerscore = 0;
+const buttons = document.querySelectorAll('.option');
 
-function resetScore(playerscore, computerscore){
-    if(computerscore === 5 || playerscore === 5){
+buttons.forEach((button) => {
+    button.addEventListener('click', () =>{
+        playerchoice = button.id
+        result = singleGame(playerchoice, getComputerChoice());
+        document.getElementById('result').innerHTML = result;
+        resetScore();
+    });
+});
+
+function resetScore(){
+    if(computerscore == 5){
+        document.getElementById('winner').innerHTML = "Computer won the game";
+        computerscore = 0;
+        playerscore = 0;
+    }else if(playerscore == 5){
+        document.getElementById('winner').innerHTML = "You won ;)";
         computerscore = 0;
         playerscore = 0;
     }
@@ -13,7 +28,6 @@ function getComputerChoice(){
     const choices = ["Rock", "Paper", "Scissors"];
     let choice = getRandomInt(choices.length)
     return choices[choice];
-    //document.getElementById("answer").innerHTML = choices[choice];
 }
 
 /**funcion que nos devuelve un numero aleatorio dentro del rango que le demos,
@@ -24,9 +38,7 @@ function getRandomInt(max){
 
 function singleGame(playerChoice, computerChoice){
     let player = playerChoice.toLowerCase();
-    console.log(player);
     let computer = computerChoice.toLowerCase();
-    console.log(computer);
     document.getElementById("player").innerHTML = playerscore;
     document.getElementById("computer").innerHTML = computerscore;
     if(player === computer){
@@ -54,7 +66,7 @@ function singleGame(playerChoice, computerChoice){
     }
 }
 
-function games(){
+/**function games(){
     for(let i = 0; i <=6; i++){
         let playerChoice = String(prompt("please select an option for rock, paper or scissors game"));
         //document.getElementById("player").innerHTML = playerscore;
@@ -62,4 +74,4 @@ function games(){
         document.getElementById("answer").innerHTML = singleGame(playerChoice, getComputerChoice());
         resetScore(playerscore, computerscore);
     }
-}
+}**/
