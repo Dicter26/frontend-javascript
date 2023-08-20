@@ -1,0 +1,22 @@
+#title1{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.buttonandimage{
+    max-width: 200px;
+}
+
+.btn{
+    text-align: center;
+}
